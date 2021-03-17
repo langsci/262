@@ -1,0 +1,5 @@
+bibtexvolume.sh
+*~
+*.aux
+*.blg
+*.log
