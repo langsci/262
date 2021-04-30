@@ -24,8 +24,6 @@
 
 \newcommand{\kommentar}[1]{}
 
-\newcommand{\refer}[1]{(\ref{#1})}
-
 \newcommand{\mytrans}[1]{`#1'}
 \newcommand{\bsp}[1]{\textit{#1}}
 \newcommand{\bspT}[2]{\bsp{#1} \mytrans{#2}}
@@ -34,7 +32,7 @@
 
 \newcommand{\NE}[1]{\textbf{#1}} %for n-words
 \newcommand{\npi}[1]{\emph{#1}} %for NPIs
-\newcommand{\reci}[1]{\uwave{#1}} % for reflexives/reciprocals
+\newcommand{\reci}[1]{\smash{\uwave{#1}}} % for reflexives/reciprocals
 
 \newcommand{\co}[1]{\mbox{\textbf{#1}}}
 %\newcommand{\up}{\mbox{\^{}}}
@@ -42,17 +40,20 @@
 
 \def\composign{\mbox{$\triangleleft$}}
 \def\compo{\ \composign\ }
-%\newcommand{\noc}[1]{\mbox{\sout{$#1$}}}
-\newcommand{\noc}[1]{\mbox{\colorbox{gray}{{\white \vphantom{ly}$#1$}}}}
-\newcommand{\dr}[1]{\uwave{#1}}
-\newcommand{\drr}[1]{\mbox{\uwave{$#1$}}}
+
+\sethlcolor{lsLightGray}
+% Thank you, egreg @ https://tex.stackexchange.com/a/347397/102558
+\DeclareRobustCommand{\noc}[1]{\text{\hl{\mbox{$#1$}}}}
+% \newcommand{\noc}[1]{\mbox{\colorbox{gray}{{\white \vphantom{ly}$#1$}}}}
+
+\newcommand{\dr}[1]{\smash{\uwave{#1}}}
+\newcommand{\drr}[1]{\mbox{\smash{\uwave{$#1$}}}}
 \newcommand{\inc}[1]{\{#1\}}
 %\newcommand{\exc}[1]{\up #1}
 \newcommand{\exc}[1]{^{\#} #1}
 
 
 \newcommand{\denotes}[1]{[\![ #1 ]\!]}
-\newcommand{\obt}[1]{\mbox{\textsf{#1}}}
 
 \newcommand{\idx}[1]{\fbox{#1}}
 
@@ -77,13 +78,13 @@
 
 \newcommand{\gry}[1][.9]{\cellcolor[gray]{#1}}
 \newcommand{\alts}{\ensuremath{\rightleftharpoons}}
-\newcommand{\unitfamily}{\sffamily}
+\newcommand{\unitfamily}{\normalfont}
 \newcommand{\unit}[1]{\mbox{\unitfamily\itshape #1}}
 \newcommand{\phon}[1]{\mbox{\unitfamily #1}}
 \newcommand{\unitup}[1]{\mbox{\unitfamily #1}}
 \newcommand{\context}{\ensuremath{\langle X,Y,I\rangle}}
 \newcommand{\concept}{\ensuremath{\langle A,B  \rangle}}
-\newcommand{\lattice}{\ensuremath{\mathcal{B} \langle X,Y,I\rangle\;}}
+\newcommand{\lattice}{\ensuremath{\mathcal{B} \langle X,Y,I\rangle}}
 \newcommand{\angl}[1]{$\langle$ #1 $\rangle$}
 \newcommand*\rott{\rotatebox{90}}
 \newcommand\citets[1]{\citeauthor{#1}'s\ (\citeyear{#1})}
@@ -106,4 +107,9 @@
 \providecommand{\noopsort}[1]{} \providecommand*{\donothing}[1]{}
 \providecommand*{\printsecond}[2]{#2}
 
-\hyphenation{In-for-ma-tion-based}
+\SetupAffiliations{output in groups = false, 
+                   separator between two = {\bigskip\\},
+                   separator between multiple = {\bigskip\\},
+                   separator between final two = {\bigskip\\}
+                   }
+

@@ -1,27 +1,17 @@
 \documentclass[output=paper]{langscibook}
-
-\newcommand{\mycomment}[1]{}
+\ChapterDOI{10.5281/zenodo.4729787}
 
 \title{Introduction}
 
-\author{Berthold Crysmann\affiliation{Université
-    de Paris, Laboratoire de linguistique formelle, CNRS} \lastand
-  Manfred Sailer\affiliation{Goethe-Universität Frankfurt a.M.}  }
-
-%\addchap{Preface}
-% \begin{refsection}
-
-%content goes here
+\author{Berthold Crysmann\affiliation{Université de Paris, Laboratoire de linguistique formelle, CNRS}  and Manfred Sailer\affiliation{Goethe-Universität Frankfurt a.M.}}
 
 \abstract{}
 
+\begin{document}
 \maketitle
 
 
-\begin{document}
-
-
-The standard view of the form-meaning interfaces, as embraced by the
+\noindent The standard view of the form-meaning interfaces, as embraced by the
 great majority of contemporary grammatical frameworks, consists in the
 assumption that meaning can be associated with grammatical form in a
 one-to-one correspondence. Under this view, composition is quite
@@ -54,7 +44,7 @@ across different linguistic sub-theories.
 \subsection{Many-to-many nature of morphology}
 
 Possibly the first module of grammar where the ideal of one-to-one
-correspondence has been challenged is \textbf{morphology}: classical
+correspondence has been challenged is \textit{morphology}: classical
 challenges \citep{Matthews72} include (i) cumulation, where several
 morphosyntactic properties are jointly expressed by a single exponent,
 (ii) extended (or multiple) exponence, where a morphosyntactic
@@ -73,13 +63,9 @@ in agglutinative languages, such as Swahili \citep{Stump93} or Finnish
 example, marking of number and case is often fused, illustrated by the
 paradigm of \textit{Rechner} in Table~\ref{tab:ParaSplit}.
 
-\begin{table}[htb]
-  \centering
-  
-  \subfigure[\textit{Rechner} `computer']{
-    
+\begin{table}  
+  \subfigure[\textit{Rechner} `computer']{%
     \centering
-
     \begin{tabular}{rll}
       \lsptoprule
        & \textsc{singular} & \textsc{plural}\\
@@ -91,9 +77,8 @@ paradigm of \textit{Rechner} in Table~\ref{tab:ParaSplit}.
       \lspbottomrule
     \end{tabular}
   }
-  \subfigure[\textit{Mensch} `human']{
+  \subfigure[\textit{Mensch} `human']{%
     \centering
-
     \begin{tabular}{rll}
       \lsptoprule
        & \textsc{singular} & \textsc{plural}\\
@@ -106,10 +91,9 @@ paradigm of \textit{Rechner} in Table~\ref{tab:ParaSplit}.
     \end{tabular}
   }
   
-  \subfigure[\textit{Hals} `neck']{
-    
+  \subfigure[\textit{Hals} `neck']{%
     \centering
-    \begin{tabular}{r|ll}
+    \begin{tabular}{rll}
       \lsptoprule
       & \textsc{singular} & \textsc{plural}\\
       \midrule
@@ -120,9 +104,8 @@ paradigm of \textit{Rechner} in Table~\ref{tab:ParaSplit}.
       \lspbottomrule
     \end{tabular}
   } 
-  \subfigure[\textit{Arm} `arm']{
+  \subfigure[\textit{Arm} `arm']{%
     \centering
-
     \begin{tabular}{rll}
       \lsptoprule
        & \textsc{singular} & \textsc{plural}\\
@@ -134,9 +117,7 @@ paradigm of \textit{Rechner} in Table~\ref{tab:ParaSplit}.
       \lspbottomrule
     \end{tabular}
   }
-  
-  \caption{German nominal paradigms}
-  \label{tab:ParaSplit}
+  \caption{German nominal paradigms\label{tab:ParaSplit}}
 \end{table}
 
 
@@ -171,7 +152,7 @@ that they do not form any natural class here, neither in terms of
 case, nor in terms of number, nor any combination of these two
 dimensions. Rather, they are interpreted in terms of paradigmatic
 opposition to overtly marked cells. A common way to capture this is in
-terms of Pāṇini's principle or the Elsewhere Condition
+terms of Pāṇini's principle or the elsewhere condition
 \citep{kiparsky_p85}, a notion embraced by almost every theory of
 inflection
 \citep[cf.][]{Halle93,Prince93,Anderson92,Stump01,Crysmann:Bonami:2016}.
@@ -192,7 +173,7 @@ zero-to-one. The fact that these deviations from a one-to-one ideal can
 be found in practically every inflectional system makes them qualify
 as an indispensable property of this grammatical module.  
 
-\medskip One-to-many relations are not only pervasive in the
+ One-to-many relations are not only pervasive in the
 correspondence between morphosyntactic properties and the exponents
 that express them, but they are also characteristic of paradigm
 structure: a frequently attested phenomenon is \emph{syncretism}, the
@@ -217,37 +198,36 @@ Table~\ref{tab:ParaSplit}).
   declension nouns in the singular, but, in the plural, the
   case/number exponents are identical to those found in the hard
   declension.
-\end{sloppypar}
+\end{sloppypar}\largerpage[-1]
 
-\begin{table}[htb]
-  \centering\smaller
-  \tabcolsep.8\tabcolsep %%% BC: This is intentional!
-\begin{tabular}{ll|ll@{$\sim$}ll|lll}
+\begin{table}
+\fittable{\begin{tabular}{lll@{\hspace{.75\tabcolsep}}lllll}
 \lsptoprule
-& & \multicolumn{4}{c}{\sc masculine} & \multicolumn{3}{c}{\sc neuter}\\
-& & hard & \multicolumn{2}{c}{mixed} & soft & hard & mixed & soft\\
+& \multicolumn{4}{c}{\scshape masculine} & \multicolumn{3}{c}{\scshape neuter}\\\cmidrule(lr){2-5}\cmidrule(lr){6-8}
+& hard & \multicolumn{2}{c}{mixed} & soft & hard & mixed & soft\\
 \midrule
-\multirow{6}{*}{\sc sg} & \sc nom & most & \multicolumn{2}{c}{pramen} & pokoj & měst-o & kuř-e & moř-e\\
-& \sc gen & most-u & pramen-u&pramen-e & pokoj-e & měst-a & kuř-et-e & moř-e\\
-& \sc dat & most-u & pramen-u&pramen-i & pokoj-i & měst-u & kuř-et-i & moř-i\\
-& \sc acc & most & \multicolumn{2}{c}{pramen} & pokoj & měst-o & kuř-e & moř-e\\
-& \sc voc & most-e & pramen-e & pramen-i & pokoj-i & měst-o & kuř-e & moř-e\\
-& \sc loc & most-ě & pramen-u & pramen-i & pokoj-i & měst-ě & kuř-et-i & moř-i\\
-& \sc ins & most-em & \multicolumn{2}{c}{pramen-em} & pokoj-em & měst-em & kuř-et-em & moř-em\\
+\multicolumn{6}{l}{\scshape sg}\\
+\scshape nom & most & \multicolumn{2}{c}{pramen} & pokoj & měst-o & kuř-e & moř-e\\
+\scshape gen & most-u & pramen-u&pramen-e & pokoj-e & měst-a & kuř-et-e & moř-e\\
+\scshape dat & most-u & pramen-u&pramen-i & pokoj-i & měst-u & kuř-et-i & moř-i\\
+\scshape acc & most & \multicolumn{2}{c}{pramen} & pokoj & měst-o & kuř-e & moř-e\\
+\scshape voc & most-e & pramen-e & pramen-i & pokoj-i & měst-o & kuř-e & moř-e\\
+\scshape loc & most-ě & pramen-u & pramen-i & pokoj-i & měst-ě & kuř-et-i & moř-i\\
+\scshape ins & most-em & \multicolumn{2}{c}{pramen-em} & pokoj-em & měst-em & kuř-et-em & moř-em\\
 \midrule
-\multirow{6}{*}{\sc pl} & \sc nom & most-y & \multicolumn{2}{c}{pramen-y} & pokoj-e & měst-a & kuř-at-a & moř-e\\
-& \sc gen & most-ů & \multicolumn{2}{c}{pramen-ů} & pokoj-ů & měst & kuř-at & moř-í\\
-& \sc dat & most-ům & \multicolumn{2}{c}{pramen-ům} & pokoj-ům & měst-ům & kuř-at-ům & moř-ím\\
-& \sc acc & most-y & \multicolumn{2}{c}{pramen-y} & pokoj-e & měst-a & kuř-at-a & moř-e\\
-& \sc voc & most-y & \multicolumn{2}{c}{pramen-y} & pokoj-e & měst-a & kuř-at-a & moř-e\\
-& \sc loc & most-ech & \multicolumn{2}{c}{pramen-ech} & pokoj-ích & měst-ech & kuř-at-ech & moř-ích\\
-& \sc ins & most-y & \multicolumn{2}{c}{pramen-y} & pokoji & měst-y & kuř-at-y & moř-i\\
+\multicolumn{6}{l}{\scshape pl}\\
+\scshape nom & most-y & \multicolumn{2}{c}{pramen-y} & pokoj-e & měst-a & kuř-at-a & moř-e\\
+\scshape gen & most-ů & \multicolumn{2}{c}{pramen-ů} & pokoj-ů & měst & kuř-at & moř-í\\
+\scshape dat & most-ům & \multicolumn{2}{c}{pramen-ům} & pokoj-ům & měst-ům & kuř-at-ům & moř-ím\\
+\scshape acc & most-y & \multicolumn{2}{c}{pramen-y} & pokoj-e & měst-a & kuř-at-a & moř-e\\
+\scshape voc & most-y & \multicolumn{2}{c}{pramen-y} & pokoj-e & měst-a & kuř-at-a & moř-e\\
+\scshape loc & most-ech & \multicolumn{2}{c}{pramen-ech} & pokoj-ích & měst-ech & kuř-at-ech & moř-ích\\
+\scshape ins & most-y & \multicolumn{2}{c}{pramen-y} & pokoji & měst-y & kuř-at-y & moř-i\\
 \midrule
-& & ‘bridge’ & \multicolumn{2}{c}{‘spring’} & ‘room’ & ‘town’ & ‘chicken’ & ‘sea’\\
+& ‘bridge’ & \multicolumn{2}{c}{‘spring’} & ‘room’ & ‘town’ & ‘chicken’ & ‘sea’\\
 \lspbottomrule
-\end{tabular}
-\caption{Overabundance and heteroclisis in Czech declension \citep{Bonami17b}}
-\label{tab:cz:ov}
+\end{tabular}}
+\caption{Overabundance and heteroclisis in Czech declension \citep{Bonami17b}\label{tab:cz:ov}}
 \end{table}
 
 Syncretism, however, differs from most other cases of lexical
@@ -259,7 +239,7 @@ combining underspecification in the case of natural splits with a
 specific type of default logic, in the case of Pāṇinian splits. By
 studying patterns of syncretism, morphologists try to understand inter
 alia how a small number of exponents are deployed to distinguish a
-much greater number of cells.
+much greater number of cells.\largerpage
 
 \begin{sloppypar}
   The opposite of syncretism is \emph{overabundance}
@@ -319,10 +299,10 @@ on a pretheoretical, descriptive level.
 %   "The success story in linguistics" 
 %One of the success stories in linguistics is Richard Montague's implementation of the 
 A key insight at the basis of modern formal semantics is the
-\emph{Principle of Compositionality}, which we show in one of its
+\emph{principle of compositionality}, which we show in one of its
 standard versions in (\ref{PrincOfCompo}).
 
-\ea Principle of Compositionality:\\
+\ea Principle of compositionality:\\
 The meaning of a complex expression is a function of the meaning of
 its component parts and the way in which they are
 combined.\label{PrincOfCompo}  \z
@@ -330,12 +310,12 @@ combined.\label{PrincOfCompo}  \z
 This principle captures the insight that speakers of a language can
 understand utterances they have never heard if they understand the
 words and the structure of these utterances.  Typical formulations
-of the Principle of Compositionality such as (\ref{PrincOfCompo})
+of the principle of compositionality such as (\ref{PrincOfCompo})
 make a number of implicit assumptions that point towards a one-to-one
 relation between form and meaning.  We shall review two aspects and
 some problems with them: First, a function has a unique value for a
-given input, second, there is a single relevant level of ``meaning,''
-or what \cite{Bach:99} calls the dictum of \emph{one sentence, one
+given input, second, there is a single relevant level of ``meaning'',
+or what \citet{Bach:99} calls the dictum of \emph{one sentence, one
   proposition}.
 
 Turning to the first aspect, the very notion of a \emph{function}
@@ -361,10 +341,10 @@ Reading 2: Two students lifted the box separately.
 
 \begin{sloppypar}
   There have been numerous attempts to make the analysis of such data
-  compatible with the Principle of Compositionality. There are three
+  compatible with the principle of compositionality. There are three
   standard solution strategies.  First, more syntactic structure can
   be postulated to subsume these cases under structural ambiguity, as
-  done in \emph{Montague Grammar}, \citet{Montague:PTQ} or through
+  done in \emph{Montague Grammar} \citep{Montague:PTQ}, or through
   \emph{quantifier raising}, starting from \citet{May:77}.  Second,
   semantic shifting operations can be introduced in order to treat the
   problem as a (systematic) lexical ambiguity.  Prominent examples of
@@ -379,17 +359,17 @@ Reading 2: Two students lifted the box separately.
 \end{sloppypar}
 
 
-Let us turn to the second implicit one-to-one aspect of the Principle
-of Compositionality.  It is usually interpreted as expressing the idea
+Let us turn to the second implicit one-to-one aspect of the principle
+of compositionality.  It is usually interpreted as expressing the idea
 of \emph{one sentence, one proposition}.  \citet{Bach:99} is widely
 quoted as explicitly challenging this assumption, in that
 whatever is ``said'' should be considered the relevant meaning in the
-sense of the Principle of Compositionality -- in contrast to what is
+sense of the principle of compositionality -- in contrast to what is
 being communicated implicitly by a conversational implicature.  The
 prime examples of sentences with more than one proposition involve
 \emph{conventional implicatures} as in the classical example from
-\citet{Grice:75} in \refer{ex-grice}.%
-\footnote{Grice's example in \refer{ex-grice} violates many of the LSA
+\citet{Grice:75} in \REF{ex-grice}.%
+\footnote{Grice's example in \REF{ex-grice} violates many of the LSA
   guidelines of linguistic examples, see
   \url{https://www.linguisticsociety.org/resource/lsa-guidelines-nonsexist-usage},
   accessed 2020-03-04.}$^,$%
@@ -406,10 +386,10 @@ prime examples of sentences with more than one proposition involve
  \end{xlist}
 \z 
 
-We indicate the two propositions expressed in \refer{ex-grice} below
-the example.  Often, only the proposition in \refer{ex-grice-ai} is
-considered what is being ``said,'' or asserted.  The proposition in
-\refer{ex-grice-ci} is considered non-asserted.  Under the heading of
+We indicate the two propositions expressed in \REF{ex-grice} below
+the example.  Often, only the proposition in \REF{ex-grice-ai} is
+considered what is being ``said'', or asserted.  The proposition in
+\REF{ex-grice-ci} is considered non-asserted.  Under the heading of
 \emph{projective meaning}, it has been argued that the difference
 between asserted content, presupposition, conventional implicature,
 and, possibly other types, is not categorical
@@ -430,13 +410,12 @@ computed in parallel.
 
 \begin{sloppypar}
   There are, however, other constellations that are problematic for
-  the one-to-one aspects of the Principle of Compositionality, some of
+  the one-to-one aspects of the principle of compositionality, some of
   which are also addressed in the contributions of \textbf{Sailer \&
     Richter} and \textbf{Bargmann, Gehrke \& Richter} of this volume.
 \end{sloppypar}
 
 
-\medskip%
 When we reconsider the list of one-to-many phenomena in morphology, it
 is easy to find analogous cases for each of them at the
 morphology-syntax interface, in syntax, and at the syntax-semantics
@@ -462,11 +441,8 @@ none of the words may carry this meaning outside the
 combination.  While there is a continuum of transparency in these
 cases, we find extreme examples such as the German particle verb
 \bspTL{an-geben}{brag}{on-give} or the English idiomatic expression
-\bspT{kick the bucket}{die.}
+\bspT{kick the bucket}{die}.
 
-
-
-\medskip%
 % * Redundancy: e.g. agreement -> NC (MS)
 There are many cases of \emph{redundancy}, i.e., the same
 morphosyntactic or semantic property is marked on more than one
@@ -475,14 +451,14 @@ extended exponence. A common pattern is to find the same category
 being marked on a substantive word and also by some function word.  In
 some varieties of English, for example, we find both a morphological
 and a periphrastic marking of the comparative, as in
-\refer{more-comp-sa}.
+\REF{more-comp-sa}.
 
 \ea
 But I found that in all area of my life where I live the most according my own rules, I feel more stronger. (GloWbE, South Africa)\label{more-comp-sa}
 \z 
 
 This constellation also occurs in the second stage in the
-\emph{Jespersen Cycle} \citep{Jespersen:17}, illustrated with a Frecnh
+\emph{Jespersen cycle} \citep{Jespersen:17}, illustrated with a Frecnh
 example in (\ref{ex:Jesp}).  There, an original
 negation marker (\textit{ne}) is strengthened through the occurrence of a further
 negative item (\textit{pas}).
@@ -490,11 +466,10 @@ negative item (\textit{pas}).
 \ea \label{ex:Jesp}
 \gll Je ne dis pas.\\
 I NE say not\\
-\mytrans{I don't say} \citep[7]{Jespersen:17}
-
+\glt `I don't say' \citep[7]{Jespersen:17}
 \z 
 
-The Jespersen Cycle has been applied to a number of grammaticalisation
+The Jespersen cycle has been applied to a number of grammaticalisation
 processes, see \citet{Gelderen:11,Gelderen:13} for an overview.  Since
 the redundant step belongs to many of the grammaticalisation cycles,
 this particular one-to-many stage constitutes a standard case in the
@@ -504,7 +479,7 @@ syntactic marking of grammatical categories.
   calls \emph{negative doubling}, where a designated negative marker
   co-occurs with a negative expression in a clause.  This is
   illustrated with a West Flemish example from
-  \citet{haegeman&zanuttini:91} in \refer{neg-doub}.  The negative
+  \citet{haegeman&zanuttini:91} in \REF{neg-doub}.  The negative
   indefinite \bspT{niemand}{nobody} can be considered a negative
   expression.  In the example, there is an additional preverbal marker
   \bsp{en-}, which is restricted to negated clauses and, thus,
@@ -522,8 +497,8 @@ Redundant marking outside morphology is also found  in so-called
 \emph{concord phenomena}.  The most widely studied is negative
 concord, where more than one negative indefinite is used in a clause
 without expressing more than one negation
-\citep{Jespersen:17,denbesten:86,Zeijlstra:diss}. %, see \refer{ex-nc-intro}.
-There is also modal concord as in \refer{mod-conc}, where we find two
+\citep{Jespersen:17,denbesten:86,Zeijlstra:diss}. %, see \REF{ex-nc-intro}.
+There is also modal concord as in \REF{mod-conc}, where we find two
 modal expressions, here a modal auxiliary and a modal adverb,
 expressing the same modality \citep{Zeijlstra:07,Huitink:12}.  We
 expect that there may potentially be other concord phenomena at the
@@ -544,8 +519,6 @@ $=$ Certainly, my eyes are deceiving me.
 
 % BC: Not sure anymore that relatives are a good case
 
-
-\medskip%
 Cases of redundancy also involve pronouns, as witnessed, inter alia,
 by resumption.  In many languages, the extraction site in an unbounded
 dependency, such as \bsp{wh}-fronting or relativisation can or must be
@@ -586,7 +559,7 @@ language, casting doubts on an ambiguity approach.
 We also find cases of doubling of \bsp{wh}-words. 
 In Afrikaans long-distance extraction, there can be 
 a copy of the extracted \bsp{wh}-phrase at the beginning of  any intermediate clause.
-This is shown in \refer{w-kopier}. 
+This is shown in \REF{w-kopier}. 
 The construction is not restricted to Afrikaans. 
 \citet{Hoehle:19wh} discusses analogous data in German, and \citet{Bruening:06} in Passamaquoddy. 
 
@@ -602,14 +575,11 @@ wherefore think you wherefore work we\\
 }
 
 
-
-
-\medskip%
 \begin{sloppypar}
   We would like to mention a final group of redundancy phenomena that
   does not involve functional elements: predicate fronting and cognate
   objects.  For many languages, we find a duplication of a fronted
-  predicate, as in the Yiddish example in \refer{yiddish-front} from
+  predicate, as in the Yiddish example in \REF{yiddish-front} from
   \citet{Kaellgran:Prince:89}.  In this case, a non-finite form of the
   predicate occurs in the fronted position, and the same verb, though
   in a potentially different inflected form, occurs in the rest of the
@@ -632,7 +602,7 @@ read\textsc{.inf} reads he the book now\\
 The cognate object construction is a further phenomenon showing
 redundancy.  In the prototypical case of this construction, a usually
 intransitive verb combines with an NP complement that can be
-considered a nominalisation of the verb, see \refer{ex-coc}.  As the
+considered a nominalisation of the verb, see \REF{ex-coc}.  As the
 example shows, the NP complement seems to be redundant.  This is,
 again, a cross-linguistically very common construction
 \citep{Jones:88,Massam:90,Mittwoch:98}.
@@ -644,13 +614,11 @@ $=$ Harry lived uneventfully.
 \citep[89]{Jones:88}
 \z 
 
-
-\medskip%
 % * Polyadic quantification (MS)
 We can turn to a different type of one-to-many relations.
 In the following cases, several quantificational elements occur in a
 sentence but need to be interpreted as a single unit, a \emph{polyadic
-  quantifier}. This is illustrated in \refer{ex-different}, from \citet{Keenan:92},
+  quantifier}. This is illustrated in \REF{ex-different}, from \citet{Keenan:92},
 %and \citet{Richter:16}, 
 with a paraphrase of the relevant reading.
  \citet{Keenan:92} shows that certain uses of \bsp{different} cannot be accounted for with a combination of ``ordinary'', i.e.\@ monadic, quantifiers. 
@@ -687,10 +655,9 @@ to systems of semantic combinatorics that assume compositionality.
   together.
 \end{sloppypar}
 
-\medskip%
 % * Ellipsis
 The last one-to-many relation that we would like to mention are elliptical phenomena. 
-These include \emph{gapping}, see \refer{ex-gapping}, and \emph{argument cluster coordination}, as in \refer{ex-acc}, both examples are taken from \citet{Kubota:Levine:16-Gapping}.
+These include \emph{gapping}, see \REF{ex-gapping}, and \emph{argument cluster coordination}, as in \REF{ex-acc}, both examples are taken from \citet{Kubota:Levine:16-Gapping}.
 
 \ea \label{ex-gap-acc}
 \begin{xlist}
@@ -712,9 +679,6 @@ There are numerous approaches to these phenomena. They can, basically, be divide
 (iii) direct interpretation approaches \citep{Ginzburg:Sag:00,Culicover:Jackendoff:05,Kubota:Levine:16-Gapping}. 
 %
 
-
-
-\bigskip\noindent
 We hope to have shown in this section that we find one-to-many
 phenomena of various types in all modules of grammar and at their
 interfaces.  It is common in formal linguistics to try to reduce these
@@ -757,7 +721,7 @@ paradigm as the set of alternations. Full (or partial) identity of
 these alternations across lexemes provides the basis for an empirical
 notion of inflection class. 
 
-Using Concept Analysis, Beniamine automatically constructs more
+Using concept analysis, Beniamine automatically constructs more
 general superclasses corresponding to the sharing of patterns across
 lexemes. If a number of lexemes share all patterns, they form a
 microclass, which corresponds to a tree. More abstract classes are
@@ -782,7 +746,7 @@ multiple inheritance hierarchies, but neither partitions nor trees.
 
 
 
-\medskip The contribution by \textbf{Crysmann} addresses a classical
+The contribution by \textbf{Crysmann} addresses a classical
 challenge in inflectional morphology, namely an extreme case of
 extended (or multiple) exponence in Batsbi (Tsova-Tush), called
 exuberant exponence \citep{Harris09}. In this language, the same set
@@ -832,7 +796,6 @@ the underlying logic, as is the case with multiple inheritance
 hierarchies, appears to provide a solid foundation to approach
 one-to-many relations at the level of descriptions.
 
-\medskip
 The chapter by \textbf{Bonami \& Webelhuth} crosses the boundary
 between morphology and syntax by investigating periphrastic tenses in
 Czech. Periphrastic realisation describes the situation where
@@ -863,8 +826,6 @@ treating third person past as exceptionally non-periphrastic
 cells. This mirrors quite neatly the case of non-default
 zero-exponence, as found in synthetic inflectional morphology. 
 
-\medskip
-
 Complex predicates provide one of the classical challenges for the
 view that the interface between syntax and the lexicon constitutes a
 straightforward one-to-one correspondence. In their chapter,
@@ -873,9 +834,7 @@ of complex predicates in Persian and explore to what extent complex
 predicate status correlates with linearisation properties.  The
 authors report the results of two acceptability judgement studies that test
 word-order variation. In (\ref{ex-fs-1}), the complex predicate
-\textit{v\={a}ks zadan} `to polish' (lit: polish hit) is used.%
-\footnote{See \textbf{Faghiri \& Samvelian}'s contribution for an
-  explanation of the abbreviations used in the glosses.} %
+\textit{v\={a}ks zadan} `to polish' (lit: polish hit) is used.
 As can be seen, the nominal and the verbal part of the complex
 predicate are adjacent in (\ref{ex-fs-1a}), but can be separated by a
 prepositional phrase, see (\ref{ex-fs-1b}).
@@ -901,9 +860,6 @@ predicates. The studies show that complex predicates behave largely as
 one would expect given their syntactically complex form, not given
 their semantic or lexicographic unit-like nature. A certain preference
 for non-separate occurrence is, however, attested.
-
-\medskip
-
 
 In the second chapter on syntax, \textbf{Pozniak, Abeillé \& Hemforth}
 explore the use of inverted vs.\ non-inverted subjects with object relatives in
@@ -952,8 +908,6 @@ acknowledge both distance-oriented processing constraints and semantic
 factors, which can be seen as an instance of one-to-many relations at the
 level of performance.
 
-\medskip
-
 \begin{sloppypar}
   The final two chapters of this volume explore one-to-many aspects of
   semantics.  \textbf{Sailer \& Richter} look at the syntax-semantics
@@ -961,7 +915,6 @@ level of performance.
   simultaneous availability of different levels of interpretation.
 \end{sloppypar}
 
-\medskip
 \textbf{Sailer \& Richter} combine two constellations that give rise
 to one-to-many correspondences: negative concord (NC) and
 coordination.  In NC languages, two negative indefinites may co-occur
@@ -981,8 +934,8 @@ for each conjunct.
 \ea \label{ex-rs-1} 
 \gll Alex hat keine Milch und keinen Zucker verrührt.\\
 Alex has no milk and no sugar stirred\\
-\glt Bi-propositional reading: `Alex didn't stir milk and Alex didn't stir sugar.'
-\glt Mono-propositional readings: `Alex didn't stir milk and sugar together.'
+\glt Bi-propositional reading: `Alex didn't stir milk and Alex didn't stir sugar.'\\
+     Mono-propositional readings: `Alex didn't stir milk and sugar together.'
 \z 
 
 They show that there are, in principle, two readings of such
@@ -994,7 +947,7 @@ mono-propositional reading, we find the first type of one-to-many
 correspondence, in the bi-propositional reading, we find the second
 type.
 
-\bigskip\noindent In the last chapter of this volume,
+In the last chapter of this volume,
 \textbf{Bargmann, Gehrke \& Richter} consider a case of a one-to-many
 correspondence that relates a single syntactic form to various levels
 of interpretation at the same time.  They discuss data with idioms
@@ -1024,7 +977,6 @@ idiomatic meaning and, at the same time, part of the idiom is
 interpreted literally, like \textit{the bucket} in (\ref{ex-bgr-1}).
 
 
-\bigskip%
 It is the central aim of this book to make a strong case for accepting
 one-to-many correspondences as an essential property of the interfaces
 of natural language grammar. The individual chapters provide detailed
@@ -1060,13 +1012,6 @@ proofreading volunteers from the Language Science Press
 community. Finally, we would like to thank Janina Radó for
 copy-editing the final manuscript.
 
-\printbibliography[heading=subbibliography,notkeyword=this]
+{\sloppy\printbibliography[heading=subbibliography,notkeyword=this]}
 
 \end{document}
-
-
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "../main"
-%%% End:

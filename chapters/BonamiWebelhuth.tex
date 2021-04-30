@@ -1,7 +1,8 @@
 \documentclass[output=paper]{langsci/langscibook}
+\ChapterDOI{10.5281/zenodo.4729795}
 
 \title{Periphrasis and morphosyntatic mismatch in Czech}
-\author{Olivier Bonami\affiliation{Université de Paris, Laboratoire de linguistique formelle, CNRS} \lastand Gert  Webelhuth\affiliation{Goethe-Universität Frankfurt a.M.}}
+\author{Olivier Bonami\affiliation{Université de Paris, Laboratoire de linguistique formelle, CNRS}  and Gert  Webelhuth\affiliation{Goethe-Universität Frankfurt a.M.}}
 
 \abstract{This paper presents an HPSG analysis of the Czech periphrastic past and conditional at the morphology-syntax interface. After clarifying the status of Czech auxiliaries as words rather than affixes, we discuss the fact that the past tense exemplifies the phenomenon of \emph{zero periphrasis}, where a  form of the main verb normally combined with an auxiliary can stand on its own in some paradigm cells. We argue that this is the periphrastic equivalent of zero exponence, and show how the phenomenon can be accommodated within a general theory of periphrasis, where periphrasis is a particular instance of a mismatch between morphology and syntax.}
 
@@ -10,30 +11,7 @@
 
 \section{Introduction}
 
-The term ``inflectional periphrasis'' denotes a situation where a construction involving two or more words stands in paradigmatic opposition with a single word in the expression of a morphosyntactic contrast. The two Czech examples in (\ref{ex:basic}) illustrate this: where the present indicative of \textsc{čekat} is expressed by the single word \emph{čekáme} in (\ref{ex:basic:prs}), its past indicative is expressed by the combination of the two words \emph{jsme} and \emph{čekali}, as shown in~(\ref{ex:basic:pst}).%%%\footnote{Glosses adhere to the Leipzig Glossing Rules. Abbreviations:
-% % % \textsc{acc}: accusative;
-% % % \textsc{an, anim}: animate;
-% % % \textsc{comp}: complementizer;
-% % % \textsc{cond}: conditional;
-% % % \textsc{dat}: dative;
-% % % \textsc{dem}: demonstrative;
-% % % \textsc{f,fem}: feminine;
-% % % \textsc{gen}: genitive;
-% % % \textsc{inan}: inanimate;
-% % % \textsc{ins}: instrumental;
-% % % \textsc{lf}: \emph{l}-form (or $l$-participle);
-% % % \textsc{loc}: locative;
-% % % \textsc{m, mas}: masculine;
-% % % \textsc{n, neu}: neuter;
-% % % \textsc{neg}: negative;
-% % % \textsc{nom}: nominative;
-% % % \textsc{pass}: passive;
-% % % \textsc{pl}: plural;
-% % % \textsc{pos}: positive;
-% % % \textsc{prs}: present;
-% % % \textsc{pst}: past;
-% % % \textsc{refl}: reflexive;
-% % % \textsc{sg}: singular. Morphosyntactic feature values in HPSG representations rely on the same abbreviations.}
+The term ``inflectional periphrasis'' denotes a situation where a construction involving two or more words stands in paradigmatic opposition with a single word in the expression of a morphosyntactic contrast. The two Czech examples in (\ref{ex:basic}) illustrate this: where the present indicative of \textsc{čekat} is expressed by the single word \emph{čekáme} in (\ref{ex:basic:prs}), its past indicative is expressed by the combination of the two words \emph{jsme} and \emph{čekali}, as shown in~(\ref{ex:basic:pst}).
 
 \begin{exe}
 \ex\label{ex:basic}\begin{xlist}
@@ -76,12 +54,12 @@ Table~\ref{tab:pst} shows the positive past subparadigm of a Czech verb.\footnot
 & \multicolumn{4}{c}{\scshape pst}\\
 & \scshape mas.anim & \scshape mas.inan & \scshape fem & \scshape neu\\
 \midrule
-\scshape 1sg & \v{c}ekal jsem  & \v{c}ekal jsem &  \v{c}ekala jsem &  \v{c}ekalo jsem\\ 
-\scshape 2sg & \v{c}ekal jsi & \v{c}ekal jsi  &  \v{c}ekala jsi&  \v{c}ekalo jsi\\ 
-\scshape 3sg &  \v{c}ekal &  \v{c}ekal &  \v{c}ekala &  \v{c}ekalo\\ 
-\scshape 1pl & \v{c}ekali jsme & \v{c}ekaly jsme &  \v{c}ekaly jsme &  \v{c}ekala jsme\\
-\scshape 2pl &  \v{c}ekali jste &  \v{c}ekaly jste&  \v{c}ekaly jste&  \v{c}ekala jste\\
-\scshape 3pl &  \v{c}ekali &  \v{c}ekaly &  \v{c}ekaly &  \v{c}ekala\\
+\scshape{\oldstylenums1}sg & \v{c}ekal jsem  & \v{c}ekal jsem &  \v{c}ekala jsem &  \v{c}ekalo jsem\\ 
+\scshape{\oldstylenums2}sg & \v{c}ekal jsi & \v{c}ekal jsi  &  \v{c}ekala jsi&  \v{c}ekalo jsi\\ 
+\scshape{\oldstylenums3}sg &  \v{c}ekal &  \v{c}ekal &  \v{c}ekala &  \v{c}ekalo\\ 
+\scshape{\oldstylenums1}pl & \v{c}ekali jsme & \v{c}ekaly jsme &  \v{c}ekaly jsme &  \v{c}ekala jsme\\
+\scshape{\oldstylenums2}pl &  \v{c}ekali jste &  \v{c}ekaly jste&  \v{c}ekaly jste&  \v{c}ekala jste\\
+\scshape{\oldstylenums3}pl &  \v{c}ekali &  \v{c}ekaly &  \v{c}ekaly &  \v{c}ekala\\
 \lspbottomrule
 \end{tabular}
 \caption{Positive past subparadigm of \textsc{\v{c}ekat} ‘wait’\label{tab:pst}}
@@ -153,20 +131,19 @@ We now turn to a brief description of the conditional. As Table~\ref{tab:prs:con
  Unlike what happens in the past indicative, a form of the auxiliary is obligatorily present in the third person. Hence an $l$-form not accompanied by an auxiliary is unambiguously a past indicative third person form. 
 
 \begin{table}
-\small
-\begin{tabular}{lllll}
+\fittable{\begin{tabular}{lllll}
 \lsptoprule
 %& \multicolumn{4}{c}{\scshape prs.cond}\\
 & \scshape mas.anim & \scshape mas.inan & \scshape fem & \scshape neu\\
 \midrule
-\scshape 1sg & \v{c}ekal bych  & \v{c}ekal bych &  \v{c}ekala bych &  \v{c}ekalo bych\\ 
-\scshape 2sg & \v{c}ekal bys & \v{c}ekal bys  &  \v{c}ekala bys&  \v{c}ekalo bys\\ 
-\scshape 3sg &  \v{c}ekal by &  \v{c}ekal by &  \v{c}ekala by &  \v{c}ekalo by\\ 
-\scshape 1pl & \v{c}ekali bychom & \v{c}ekaly bychom &  \v{c}ekaly bychom &  \v{c}ekala bychom\\
-\scshape 2pl &  \v{c}ekali byste &  \v{c}ekaly byste&  \v{c}ekaly byste&  \v{c}ekala byste\\
-\scshape 3pl &  \v{c}ekali by&  \v{c}ekaly by&  \v{c}ekaly by&  \v{c}ekala by\\
+\scshape{\oldstylenums1}sg & \v{c}ekal bych  & \v{c}ekal bych &  \v{c}ekala bych &  \v{c}ekalo bych\\ 
+\scshape{\oldstylenums2}sg & \v{c}ekal bys & \v{c}ekal bys  &  \v{c}ekala bys&  \v{c}ekalo bys\\ 
+\scshape{\oldstylenums3}sg &  \v{c}ekal by &  \v{c}ekal by &  \v{c}ekala by &  \v{c}ekalo by\\ 
+\scshape{\oldstylenums1}pl & \v{c}ekali bychom & \v{c}ekaly bychom &  \v{c}ekaly bychom &  \v{c}ekala bychom\\
+\scshape{\oldstylenums2}pl &  \v{c}ekali byste &  \v{c}ekaly byste&  \v{c}ekaly byste&  \v{c}ekala byste\\
+\scshape{\oldstylenums3}pl &  \v{c}ekali by&  \v{c}ekaly by&  \v{c}ekaly by&  \v{c}ekala by\\
 \lspbottomrule
-\end{tabular}
+\end{tabular}}
 \caption{Present conditional subparadigm of \textsc{\v{c}ekat} ‘wait’ \label{tab:prs:cond} }
 \end{table}
 
@@ -180,32 +157,31 @@ Two older periphrases further illustrate the contrast between the past and the c
 %& \multicolumn{4}{c}{\scshape pst.cond}\\
 & \scshape mas.anim & \scshape mas.inan & \scshape fem & \scshape neu\\
 \midrule
-\scshape 1sg & byl bych \v{c}ekal& byl bych \v{c}ekal&  byla bych \v{c}ekala&  bylo bych \v{c}ekalo\\ 
-\scshape 2sg & byl bys \v{c}ekal& byl bys \v{c}ekal&  byla bys \v{c}ekala&  bylo bys \v{c}ekalo\\ 
-\scshape 3sg &  byl by \v{c}ekal&  byl by \v{c}ekal&  byla by \v{c}ekala&  bylo by \v{c}ekalo\\ 
-\scshape 1pl & byli bychom \v{c}ekali& byly bychom \v{c}ekaly&  byly bychom \v{c}ekaly&  byla bychom \v{c}ekala\\
-\scshape 2pl &  byli byste \v{c}ekali&  byly byste \v{c}ekaly&  byly byste \v{c}ekaly&  byla byste \v{c}ekala\\
-\scshape 3pl &  byli by \v{c}ekali&  byly by \v{c}ekaly&  byly by \v{c}ekaly&  byla by \v{c}ekala\\
+\scshape{\oldstylenums1}sg & byl bych \v{c}ekal& byl bych \v{c}ekal&  byla bych \v{c}ekala&  bylo bych \v{c}ekalo\\ 
+\scshape{\oldstylenums2}sg & byl bys \v{c}ekal& byl bys \v{c}ekal&  byla bys \v{c}ekala&  bylo bys \v{c}ekalo\\ 
+\scshape{\oldstylenums3}sg &  byl by \v{c}ekal&  byl by \v{c}ekal&  byla by \v{c}ekala&  bylo by \v{c}ekalo\\ 
+\scshape{\oldstylenums1}pl & byli bychom \v{c}ekali& byly bychom \v{c}ekaly&  byly bychom \v{c}ekaly&  byla bychom \v{c}ekala\\
+\scshape{\oldstylenums2}pl &  byli byste \v{c}ekali&  byly byste \v{c}ekaly&  byly byste \v{c}ekaly&  byla byste \v{c}ekala\\
+\scshape{\oldstylenums3}pl &  byli by \v{c}ekali&  byly by \v{c}ekaly&  byly by \v{c}ekaly&  byla by \v{c}ekala\\
 \lspbottomrule
 \end{tabular}}
 \caption{Past conditional subparadigm of \textsc{\v{c}ekat} ‘wait’ \label{tab:pst:cond}}
 \end{table}
 
 \begin{table}
-\small
-\begin{tabular}{lllll}
+\fittable{\begin{tabular}{lllll}
 \lsptoprule
 %& \multicolumn{4}{c}{\scshape pst.cond}\\
 & \scshape mas.anim & \scshape mas.inan & \scshape fem & \scshape neu\\
 \midrule
-\scshape 1sg & byl jsem \v{c}ekal& byl jsem \v{c}ekal&  byla jsem \v{c}ekala&  bylo jsem \v{c}ekalo\\ 
-\scshape 2sg & byl jsi \v{c}ekal& byl jsi \v{c}ekal&  byla jsi \v{c}ekala&  bylo jsi \v{c}ekalo\\ 
-\scshape 3sg &  byl  \v{c}ekal&  byl  \v{c}ekal&  byla  \v{c}ekala&  bylo  \v{c}ekalo\\ 
-\scshape 1pl & byli jsme \v{c}ekali& byly jsme \v{c}ekaly&  byly jsme \v{c}ekaly&  byla jsme \v{c}ekala\\
-\scshape 2pl &  byli jste \v{c}ekali&  byly jste \v{c}ekaly&  byly jste \v{c}ekaly&  byla jste \v{c}ekala\\
-\scshape 3pl &  byli  \v{c}ekali&  byly  \v{c}ekaly&  byly  \v{c}ekaly&  byla  \v{c}ekala\\
+\scshape{\oldstylenums1}sg & byl jsem \v{c}ekal& byl jsem \v{c}ekal&  byla jsem \v{c}ekala&  bylo jsem \v{c}ekalo\\ 
+\scshape{\oldstylenums2}sg & byl jsi \v{c}ekal& byl jsi \v{c}ekal&  byla jsi \v{c}ekala&  bylo jsi \v{c}ekalo\\ 
+\scshape{\oldstylenums3}sg &  byl  \v{c}ekal&  byl  \v{c}ekal&  byla  \v{c}ekala&  bylo  \v{c}ekalo\\ 
+\scshape{\oldstylenums1}pl & byli jsme \v{c}ekali& byly jsme \v{c}ekaly&  byly jsme \v{c}ekaly&  byla jsme \v{c}ekala\\
+\scshape{\oldstylenums2}pl &  byli jste \v{c}ekali&  byly jste \v{c}ekaly&  byly jste \v{c}ekaly&  byla jste \v{c}ekala\\
+\scshape{\oldstylenums3}pl &  byli  \v{c}ekali&  byly  \v{c}ekaly&  byly  \v{c}ekaly&  byla  \v{c}ekala\\
 \lspbottomrule
-\end{tabular}
+\end{tabular}}
 \caption{Pluperfect subparadigm of \textsc{\v{c}ekat} ‘wait’ \label{tab:pluperfect}}
 \end{table}
 
@@ -215,7 +191,7 @@ A possible analysis of the constructions illustrated in Tables~\ref{tab:pst:cond
 
 More work on earlier stages of the language would be needed to substantiate the feasibility of such compositional analyses of complex periphrases. For present purposes, corpus searches confirm that the forms in Tables~\ref{tab:pst:cond} and~\ref{tab:pluperfect} are clearly no longer in use, and we will not attempt to analyze them further.
 
-To sum up this section, the past indicative contrasts with the present indicative in relying on an $l$-form for the main verb; it contrasts with conditional subparadigms in (i) the use of the past auxiliary in the first and second person, and (ii) the absence of an auxiliary in the third person. Such a distribution can be seen as the periphrastic equivalent of the familiar situation of ``zero exponence''. Consider the present subparadigm in Table~\ref{tab:prs}. Here, the \textsc{3sg} form contrasts with all other forms in the absence of a suffix following the vowel \emph{-á-}. In the same way, in Table~\ref{tab:pst}, the past indicative third person forms contrast with their first and second person equivalents in the absence of a past auxiliary; they likewise contrast with their conditional correspondents in the absence of one or two auxiliaries. By analogy with zero exponence, we will call this phenomenon ‘zero periphrasis’.  
+To sum up this section, the past indicative contrasts with the present indicative in relying on an $l$-form for the main verb; it contrasts with conditional subparadigms in (i) the use of the past auxiliary in the first and second person, and (ii) the absence of an auxiliary in the third person. Such a distribution can be seen as the periphrastic equivalent of the familiar situation of ``zero exponence''. Consider the present subparadigm in Table~\ref{tab:prs}. Here, the \textsc{3sg} form contrasts with all other forms in the absence of a suffix following the vowel \emph{-á-}. In the same way, in Table~\ref{tab:pst}, the past indicative third person forms contrast with their first and second person equivalents in the absence of a past auxiliary; they likewise contrast with their conditional correspondents in the absence of one or two auxiliaries. By analogy with zero exponence, we will call this phenomenon \emph{zero periphrasis}.  
 
 \begin{table}
 \begin{tabular}{lll}
@@ -302,7 +278,7 @@ listen =her would= her= probably bore.\\
 
 Toman's observations provide a strong argument against a phrasal affixation analysis of Czech clitics: if clitics are affixes attached by morphology to the first constituent in the clause, it is predicted that they are always attached to that constituent, as morphology does not normally peer into syntax to decide where affixes should be attached; special mechanisms would need to be introduced to deal with examples (\ref{ex:Toman:a}--\ref{ex:cluster:right:b}), eliminating much of the appeal of a morphological analysis. On the other hand, this data is compatible with the view according to which clitics are just prosodically deficient words, occurring in a fixed syntactic position and attaching to the preceding or following constituent depending on prosodic properties of the context.
 
-Pointing in the same direction is the observation by \citet[210]{Rosen01} that some lexical items, including the copula, can be clitic or nonclitic depending on context. That the copula does not need to be clitic is evident from the fact that it can form a full utterance of its own, as a short answer to a question (second utterance in (\ref{ex:short})), and can occur in first (first utterance  in (\ref{ex:short})) or third~(\ref{ex:third}) position, unlike, e.g. the past auxiliary.\footnote{The past auxiliary can occur clause-initially in questions in colloquial or ``Common'' Czech, but not in the more formal variety of ``Standard'' Czech \citep[70]{Hana07}. In this paper we ignore the complexities of Common Czech.} However, that it \emph{can} be a clitic is evident from examples such as~(\ref{ex:cop:clitic}), cited by Rosen from the Czech National Corpus, where the copula occurs between the first constituent and a pronominal clitic. Since pronominal clitics obligatorily belong to the clitic cluster and the clitic cluster needs to be in second position, the copula has to also be part of the cluster in this and similar examples.
+Pointing in the same direction is the observation by \citet[210]{Rosen01} that some lexical items, including the copula, can be clitic or nonclitic depending on context. That the copula does not need to be clitic is evident from the fact that it can form a full utterance of its own, as a short answer to a question (second utterance in \ref{ex:short}), and can occur in first (first utterance  in \ref{ex:short}) or third~(\ref{ex:third}) position, unlike, e.g. the past auxiliary.\footnote{The past auxiliary can occur clause-initially in questions in colloquial or ``Common'' Czech, but not in the more formal variety of ``Standard'' Czech \citep[70]{Hana07}. In this paper we ignore the complexities of Common Czech.} However, that it \emph{can} be a clitic is evident from examples such as~(\ref{ex:cop:clitic}), cited by Rosen from the Czech National Corpus, where the copula occurs between the first constituent and a pronominal clitic. Since pronominal clitics obligatorily belong to the clitic cluster and the clitic cluster needs to be in second position, the copula has to also be part of the cluster in this and similar examples.
 
 \begin{exe}
 \ex\label{ex:short}\begin{xlist}
@@ -444,7 +420,7 @@ We thus conclude that previous literature on Czech and Slavic languages in HPSG 
 \section{Periphrasis as syntactic exponence}
 \label{sec:ana}
 
-\subsection{Main assumptions}
+\subsection{Main assumptions}\largerpage
 
 In this subsection we outline the general approach to periphrasis that we will rely on in the remainder of this paper, building heavily on  \citet{Bonami13}, \citet{Bonami14d}, and \citet{Bonami16b}. This relies on three main ideas. First, we adopt an inferential-realizational approach to inflection \citep{Matthews72,Zwicky85,Anderson92,Aronoff94,Stump01}, where inflection and syntax are strictly separated, and the inflectional component deduces the phonological form of words jointly from the lexeme's lexical entry and the morphosyntactic description provided by syntax for that word in the context of a particular utterance. \citet{Crysmann14} and \citet{Bonami15b} present a detailed inferential-realizational approach to inflection within HPSG that is entirely compatible with the proposals discussed here. However, since we will not be discussing matters of synthetic exponence in detail, for present purposes we can simply see inflection as a function \textit{\textbf{f}} that deduces a phonological form from a \textsc{synsem} object, as indicated in Figure~\ref{fig:infl:prelim}.
 
@@ -492,7 +468,7 @@ A crucial ingredient of such an approach, then, is a way of licensing limited de
 \caption{Interface statement: default identity between \textsc{head} and \textsc{infl}\label{fig:default}}
 \end{figure}
 
-This statement is sufficient to license the correct form in most situations. In particular it is the relevant statement for present forms of the verb in Czech, and contributes to licensing the analysis of the simple sentence in Figure~\ref{fig:ana:prs}.
+This statement is sufficient to license the correct form in most situations. In particular it is the relevant statement for present forms of the verb in Czech, and contributes to licensing the analysis of the simple sentence in Figure~\ref{fig:ana:prs}.\largerpage
 
 \begin{figure}
 \begin{forest}
@@ -511,7 +487,7 @@ This statement is sufficient to license the correct form in most situations. In 
 \caption{Analysis of a  simple Czech clause in the present tense\label{fig:ana:prs}}
 \end{figure}
 
-Here we make some explicit assumptions about the feature geometry necessary to capture Czech inflection. As in \citet{Sag12} and related literature, the feature \textsc{lid} captures lexemic identity -- all forms of a lexeme share the same \textsc{lid} value, and no two lexemes have identical \textsc{lid} values. For simplicity we first limit ourselves to the present and past indicative and the $l$-form, see Section~\ref{sec:cond} for an extension to the conditional. This simple subsystem can easily be captured using a single feature \textsc{vform} with  possible values \emph{\mbox{l-form}, prs, pst}. Our approach can trivially be generalized to the rest of the paradigm using a more elaborate feature geometry. The feature \textsc{pol} governs the inflectional realization of negation as the expression of its \textit{neg} value. Finally,  we assume that both finite and nonfinite forms of verbs have a full-fledged \textsc{agr} value, with gender, number and person features. Implicit here is the hypothesis that rules of morphological exponence encapsulated in the function \textbf{\textit{f}} relating \textsc{infl} to \textsc{head} will take care of the fact that $l$-forms neutralize person distinctions, while finite forms neutralize gender distinctions. Within an inferential-realizational view of inflection \citep{Stump01}, this simply amounts to having no rule realizing the neutralized category; see \citet{Zwicky86} for discussion and motivation. An obvious alternative would be to capture neutralizations in the feature system, by  complicating the relationship between \textsc{head} and \textsc{infl}: under such a view, finite and nonfinite forms would have different features under \textsc{infl|agr}. Since the two solutions make the same empirical prediction, we adopt the simpler formulation based on morphology proper rather than the morphology-syntax interface.
+Here we make some explicit assumptions about the feature geometry necessary to capture Czech inflection. As in \citet{Sag12} and related literature, the feature \textsc{lid} captures lexemic identity -- all forms of a lexeme share the same \textsc{lid} value, and no two lexemes have identical \textsc{lid} values. For simplicity we first limit ourselves to the present and past indicative and the $l$-form, see Section~\ref{sec:cond} for an extension to the conditional. This simple subsystem can easily be captured using a single feature \textsc{vform} with  possible values \emph{\mbox{l-form}, prs, pst}. Our approach can trivially be generalized to the rest of the paradigm using a more elaborate feature geometry. The feature \textsc{pol} governs the inflectional realization of negation as the expression of its \textit{neg} value. Finally,  we assume that both finite and nonfinite forms of verbs have a full-fledged \textsc{agr} value, with gender, number and person features. Implicit here is the hypothesis that rules of morphological exponence encapsulated in the function \textbf{\textit{f}} relating \textsc{infl} to \textsc{head} will take care of the fact that $l$-forms neutralize person distinctions, while finite forms neutralize gender distinctions. Within an inferential-realizational view of inflection \citep{Stump01}, this simply amounts to having no rule realizing the neutralized category; see \citet{Zwicky86} for discussion and motivation. An obvious alternative would be to capture neutralizations in the feature system, by  complicating the relationship between \textsc{head} and \textsc{infl}: under such a view, finite and nonfinite forms would have different features under \textsc{infl|agr}. Since the two solutions make the same empirical prediction, we adopt the simpler formulation based on morphology proper rather than the morphology-syntax interface.\largerpage
 
 
 While the  interface statement  in Figure~\ref{fig:ana:prs} captures simple cases such as the present, extra statements are necessary to deal with situations of mismatch. For instance, we assume the statement in  Figure~\ref{fig:pst.3} to account for the Czech third person past. What we want to capture here is the fact that the word \emph{čekali} in a sentence such as~(\ref{ex:basic:pst:3}) expresses the past third plural through a form that is not inherently a past form (e.g. it is used in the present conditional) nor a third person form (it is also part of the expression of first and second person plural past). To this end, the statement contrasts the value of \textsc{vform} under \textsc{head} with the value of \textsc{vform} under \textsc{infl}: in essence, this states that, to express the past third person, one uses an $l$-form. All other feature values are constrained to be identical under \textsc{head} and \textsc{infl}. This ensures that the verb will be appropriately inflected for (positive or negative) polarity and for number and gender. 
@@ -558,7 +534,7 @@ This statement thus licenses forms such as \emph{koupil} in the sentence whose a
 \caption{Analysis of a  simple Czech clause in the third person past\label{fig:ana:pst.3}}
 \end{figure}
  
-We now have all the ingredients in place to turn to the analysis of periphrastic forms. Figure~\ref{fig:LE:aux} exhibits the lexical entry of the Czech past auxiliary, which embodies a number of assumptions.  Following \citet{Hana07} and \citet{Petkevic15}, we assume that Czech auxiliaries are (surface) heads and raise the arguments of the main verb: both the subject \avm{\tag{$s$}} and the list of non-subject arguments \avm{\tag{$L$}} are raised from the main verb to the auxiliary's \textsc{arg-st} list. Following \citet{Bonami14d}, we assume that auxiliaries in general have unusual lexical identity. From the point of view of \textsc{head}, they inherit the lexical identity of the main verb, which they project to phrase level, e.g. for purposes of selection. But from the point of view of inflection, they have their own properties that distinguish them from the main verb. This again can be captured by making use of the \textsc{head} vs. \textsc{infl} distinction, applied now to the \textsc{lid} feature: note the sharing of \textsc{lid} value \avm{\2} between the auxiliary's \textsc{head} and that of its $l$-form complement. Finally, the lexical entry also enforces the sharing of \textsc{head|agr} and \textsc{head|pol} values between auxiliary and main verb, ensuring appropriate inflection on the $l$-form.
+We now have all the ingredients in place to turn to the analysis of periphrastic forms. Figure~\ref{fig:LE:aux} exhibits the lexical entry of the Czech past auxiliary, which embodies a number of assumptions.  Following \citet{Hana07} and \citet{Petkevic15}, we assume that Czech auxiliaries are (surface) heads and raise the arguments of the main verb: both the subject \negmedspace\avm{\tag{$s$}} and the list of non-subject arguments \avm{\tag{$L$}} are raised from the main verb to the auxiliary's \textsc{arg-st} list. Following \citet{Bonami14d}, we assume that auxiliaries in general have unusual lexical identity. From the point of view of \textsc{head}, they inherit the lexical identity of the main verb, which they project to phrase level, e.g. for purposes of selection. But from the point of view of inflection, they have their own properties that distinguish them from the main verb. This again can be captured by making use of the \textsc{head} vs. \textsc{infl} distinction, applied now to the \textsc{lid} feature: note the sharing of \textsc{lid} value \negmedspace\avm{\2} between the auxiliary's \textsc{head} and that of its $l$-form complement. Finally, the lexical entry also enforces the sharing of \textsc{head|agr} and \textsc{head|pol} values between auxiliary and main verb, ensuring appropriate inflection on the $l$-form.
 
 \begin{figure}
 \avm{
@@ -634,24 +610,24 @@ Note that, unlike the auxiliary, the main verb in this construction instantiates
 
 One remaining issue that has not been dealt with is paradigmatic competition between the three inflection strategies at hand: canonical synthetic inflection cannot be used in the past, periphrastic inflection in the past cannot be used in the third  person. One way of dealing with this issue would be to add negative stipulations in various places so as to ensure that the three strategies are in complementary distribution. We contend that this is not a satisfactory approach, as it fails to capture the inherently paradigmatic competition between inflection strategies, and the fact that the same types of arbitration mechanisms regulating the choice of a synthetic exponent also regulate the choice between synthesis and periphrasis \citep{Bonami14d}. In the case at hand, specificity seems to be at play: synthesis is the default, preempted by the more specific periphrastic past, which is itself preempted in the third person by the most specific third person past. 
 
- To capture this, we follow \citet{Stump06} in assuming that Pāṇini's Principle is active at the syntax-morphology interface, and regulates the use of the most specific inflection strategy wherever more than one strategy is available. \citet{Crysmann14} present an HPSG-compatible formalization of Pāṇini's Principle for synthetic inflection defined as a closure operation on the descriptions of rules of exponence. In a nutshell, this assumes that each rule of exponence is a pairing of a description of a morphosyntactic context and an exponence strategy. The closure operation consists in identifying, for each rule $R$, the set of rules $S={R_1,\ldots,R_n}$ whose morphosyntactic context is less specific than that of $R$, and to strengthen $R$'s morphosyntactic context  by the conjunction of the negations of the contexts of all rules in $S$. \citet{Bonami16b} propose to extend that general modelling strategy to the syntax-morphology interface, through the use of interface statements such as those in Figures~\ref{fig:default}, \ref{fig:pst.3}, and~\ref{fig:pst}. Specifically, they propose the following. The syntax-morphology interface takes the form of a set of  conditional statements $S=\{A_1\Rightarrow C_1,\ldots, A_n\Rightarrow C_n\}$. For each statement $A_i\Rightarrow C_i$, we first find the set of $S_i=\{A^1_i\Rightarrow C^1_i,\ldots, A^k_i\Rightarrow C^k_i\}\subset S$ of statements whose antecedent is strictly more specific than $A_i$. Then each $A_i$ is strengthened with the conjunction of the negations of all $A^j_i$. As a result,  $A_i\Rightarrow C_i$ is replaced by $(A_i\wedge\neg A^1_i\wedge\cdots\wedge\neg A^k_i)\Rightarrow C_i$, which is mutually exclusive with all the more specific statements in $S$.
+ To capture this, we follow \citet{Stump06} in assuming that Pāṇini's principle is active at the syntax-morphology interface, and regulates the use of the most specific inflection strategy wherever more than one strategy is available. \citet{Crysmann14} present an HPSG-compatible formalization of Pāṇini's principle for synthetic inflection defined as a closure operation on the descriptions of rules of exponence. In a nutshell, this assumes that each rule of exponence is a pairing of a description of a morphosyntactic context and an exponence strategy. The closure operation consists in identifying, for each rule $R$, the set of rules $S={R_1,\ldots,R_n}$ whose morphosyntactic context is less specific than that of $R$, and to strengthen $R$'s morphosyntactic context  by the conjunction of the negations of the contexts of all rules in $S$. \citet{Bonami16b} propose to extend that general modelling strategy to the syntax-morphology interface, through the use of interface statements such as those in Figures~\ref{fig:default}, \ref{fig:pst.3}, and~\ref{fig:pst}. Specifically, they propose the following. The syntax-morphology interface takes the form of a set of  conditional statements $S=\{A_1\Rightarrow C_1,\ldots, A_n\Rightarrow C_n\}$. For each statement $A_i\Rightarrow C_i$, we first find the set of $\smash{S_i=\{A^1_i\Rightarrow C^1_i,\ldots, A^k_i\Rightarrow C^k_i\}\subset S}$ of statements whose antecedent is strictly more specific than $A_i$. Then each $A_i$ is strengthened with the conjunction of the negations of all $\smash{A^j_i}$. As a result,  $A_i\Rightarrow C_i$ is replaced by $\smash{(A_i\wedge\neg A^1_i\wedge\cdots\wedge\neg A^k_i)\Rightarrow C_i}$, which is mutually exclusive with all the more specific statements in $S$.
  
 \begin{figure}
-\begin{tabular}{l}
+\begin{tabular}{@{}l@{\,}c@{\,}l@{}}
 \avm{
 (
     [ ]\  $\bigwedge$\\
-    \punk{$\neg$ [head & [ vform & pst]]\ $\bigwedge$}{} \\
+    $\neg$ [head & [ vform & pst]] & $\bigwedge$ \smallskip\\
     $\neg$ [head & [ vform & pst\\ agr & 3rd]]
-)}\,
-$\Rightarrow$
+)}
+& $\Rightarrow$ &
 \avm{[ head & \1\\ infl & \1]}
 \medskip\\
 \avm{(
 [head & [ vform & pst]]\ $\bigwedge$\smallskip\\
 $\neg$  [head & [ vform & pst\\ agr & 3rd]]
-)}\,
-$\Rightarrow$
+)}
+& $\Rightarrow$ &
 \avm{[ 	head & [ agr & \3]\\ 
 	infl & [ lid & past-aux-lid\\
 			 vform & prs\\
@@ -663,8 +639,8 @@ $\Rightarrow$
 \avm{[head & [	vform & pst\\
 			agr & 3rd
 		  ]
-]}\, 
-$\Rightarrow$
+]}
+& $\Rightarrow$ &
 \avm{[ 	head & [lid & \2\\ agr & \3\\ pol & \4]\\ 
 	infl & [	lid & \2\\
 				vform & l-form\\
@@ -677,12 +653,13 @@ $\Rightarrow$
 \end{figure}
 
 \begin{figure}
-\avm{[head & $\neg$ [vform &  pst]]}\,
-$\Rightarrow$
+\begin{tabular}{@{}l@{\,}c@{\,}l@{}}
+\avm{[head & $\neg$ [vform &  pst]]}
+& $\Rightarrow$ & 
 \avm{[head & \1\\ infl & \1]}
 \medskip\\
-\avm{[head & [vform & pst\\ agr & $\neg$3rd]]}\,
-$\Rightarrow$
+\avm{[head & [vform & pst\\ agr & $\neg$3rd]]}
+& $\Rightarrow$ &
 \avm{[ 	head & [agr & \3]\\ 
 	infl & [	lid & past-aux-lid\\
 				vform & prs\\
@@ -695,8 +672,8 @@ $\Rightarrow$
 [head & [	vform & pst\\
 			agr & 3rd
 		  ]
-]}\, 
-$\Rightarrow$
+]} 
+& $\Rightarrow$ & 
 \avm{[ 	head & [lid & \2\\ agr & \3\\ pol & \4]\\ 
 	infl & [	lid & \2\\
 				vform & l-form\\
@@ -704,6 +681,7 @@ $\Rightarrow$
 				pol & \4\\
 			]
 ]}
+\end{tabular}
 \caption{Simplified effects of Pāṇinian strengthening\label{fig:Panini:plus}}
 \end{figure}
 
@@ -741,7 +719,7 @@ Our analysis extends readily to the present conditional: just adding to the gram
 				pol & \4
 		   ]\\
 	infl & [	lid & cond-aux-lid]\\
-    arg-st & <\5,[	arg-st & <\5> \+ \tag{$L$}\\
+    arg-st & <\5,[	arg-st & <\5> \+ \tag{$L$}\smallskip\\
     					head & [	lid & \1\\
 									vform & l-form\\
 									age & \3\\
@@ -873,7 +851,7 @@ the same form of the main verb (as expressed by having the same
 the past in the third person and as part of a periphras\-tic expression
 of the past in the first and second person; this directly captures the
 nature of zero periphrasis, without any need to postulate empty
-auxiliaries or other ontologically disputable entities.
+auxiliaries or other ontologically disputable entities.\pagebreak
 
 \section*{Abbreviations}
 \begin{multicols}{2}
