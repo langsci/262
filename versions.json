@@ -1,7 +1,1 @@
-{"versions": [{"versiontype": "proofreading",
-		"title": "One-to-many",
-		"authors": [{"name": "Berthold Crysmann"},{"name":" Manfred Sailer"}],
-	"license": "CC-BY-4.0",
-	"publishedAt": "2019-11-28T08:56:32.000Z"}
-	]
-}
+{"versions": [{"authors": [{"name": "Berthold Crysmann"}, {"name": " Manfred Sailer"}], "title": "One-to-many", "publishedAt": "2019-11-28T08:56:32.000Z", "license": "CC-BY-4.0", "versiontype": "proofreading"}, {"title": "One-to-many", "versiontype": "first_edition", "license": "CC-BY-4.0", "publishedAt": "2021-06-11T16:16:16.157144", "authors": [{"name": "Berthold Crysmann"}, {"name": " Manfred Sailer"}]}]}
